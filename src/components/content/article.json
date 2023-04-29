@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_content_articles",
+  "info": {
+    "displayName": "Article"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "custom"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "Link": {
+      "displayName": "Link",
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    }
+  }
+}

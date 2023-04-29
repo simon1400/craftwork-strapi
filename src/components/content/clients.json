@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_content_clients",
+  "info": {
+    "displayName": "Clients"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
