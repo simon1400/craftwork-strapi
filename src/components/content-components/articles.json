@@ -1,20 +1,12 @@
 {
-  "collectionName": "components_content_articles",
+  "collectionName": "components_content_components_articles",
   "info": {
-    "displayName": "Article"
+    "displayName": "Articles"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
-    },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
       "required": true
     },
     "content": {
@@ -24,11 +16,18 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "Link": {
-      "displayName": "Link",
+    "link": {
       "type": "component",
       "repeatable": false,
       "component": "link.link"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

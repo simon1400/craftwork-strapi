@@ -1,25 +1,15 @@
 {
   "collectionName": "components_content_icons",
   "info": {
-    "displayName": "Icons"
+    "displayName": "Icons",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "icon": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
-    "text": {
-      "type": "text",
-      "required": false
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.icon"
     }
   }
 }

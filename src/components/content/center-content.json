@@ -1,20 +1,16 @@
 {
   "collectionName": "components_content_center_contents",
   "info": {
-    "displayName": "CenterContent"
+    "displayName": "CenterContent",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "content": {
-      "type": "customField",
-      "options": {
-        "preset": "custom"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+    "items": {
+      "displayName": "ShortContent",
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.short-content"
     }
   }
 }

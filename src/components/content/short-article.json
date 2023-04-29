@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_short_articles",
+  "info": {
+    "displayName": "ShortArticle"
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "displayName": "Articles",
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.articles"
+    }
+  }
+}

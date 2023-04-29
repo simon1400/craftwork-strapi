@@ -35,10 +35,10 @@
       "type": "dynamiczone",
       "components": [
         "content.icons",
-        "content.article",
         "content.clients",
         "content.big-image",
-        "content.center-content"
+        "content.center-content",
+        "content.short-article"
       ]
     },
     "meta": {

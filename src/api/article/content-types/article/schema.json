@@ -33,11 +33,11 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "content.article",
         "content.big-image",
         "content.center-content",
         "content.clients",
-        "content.icons"
+        "content.icons",
+        "content.short-article"
       ],
       "required": false
     },
