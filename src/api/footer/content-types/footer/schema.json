@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Patička webu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "footer1": {
+      "displayName": "FooterItem",
+      "type": "component",
+      "repeatable": false,
+      "component": "content-components.footer-item"
+    },
+    "footer2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-components.footer-item"
+    },
+    "footer3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-components.footer-item"
+    }
+  }
+}
