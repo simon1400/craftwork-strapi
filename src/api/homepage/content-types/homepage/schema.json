@@ -38,7 +38,8 @@
         "content.clients",
         "content.big-image",
         "content.center-content",
-        "content.short-article"
+        "content.short-article",
+        "content.center-text"
       ]
     },
     "meta": {

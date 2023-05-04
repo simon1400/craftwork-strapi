@@ -37,7 +37,8 @@
         "content.center-content",
         "content.clients",
         "content.icons",
-        "content.short-article"
+        "content.short-article",
+        "content.center-text"
       ],
       "required": false
     },
