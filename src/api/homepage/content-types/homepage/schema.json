@@ -39,13 +39,26 @@
         "content.big-image",
         "content.center-content",
         "content.short-article",
-        "content.center-text"
+        "content.center-text",
+        "content.signpost",
+        "content.carousel",
+        "content.slider",
+        "content.contact-block",
+        "content.contact-form"
       ]
     },
     "meta": {
       "type": "component",
       "repeatable": false,
       "component": "seo.meta"
+    },
+    "smallTitle": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
     }
   }
 }

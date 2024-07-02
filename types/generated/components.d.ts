@@ -65,6 +65,26 @@ export interface ContentComponentsShortContent extends Schema.Component {
   };
 }
 
+export interface ContentComponentsSignpostItem extends Schema.Component {
+  collectionName: 'components_content_components_signpost_items';
+  info: {
+    displayName: 'ShortBlock';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'custom';
+        }
+      >;
+    image: Attribute.Media<'images'>;
+  };
+}
+
 export interface ContentBigImage extends Schema.Component {
   collectionName: 'components_content_big_images';
   info: {
@@ -73,6 +93,17 @@ export interface ContentBigImage extends Schema.Component {
   };
   attributes: {
     image: Attribute.Media<'images'> & Attribute.Required;
+  };
+}
+
+export interface ContentCarousel extends Schema.Component {
+  collectionName: 'components_content_carousels';
+  info: {
+    displayName: 'carousel';
+    icon: 'grid';
+  };
+  attributes: {
+    item: Attribute.Component<'content-components.signpost-item', true>;
   };
 }
 
@@ -114,6 +145,48 @@ export interface ContentClients extends Schema.Component {
   attributes: {
     title: Attribute.String;
     images: Attribute.Media<'images', true> & Attribute.Required;
+    cta: Attribute.Component<'link.link'>;
+  };
+}
+
+export interface ContentContactBlock extends Schema.Component {
+  collectionName: 'components_content_contact_blocks';
+  info: {
+    displayName: 'ContactBlock';
+    icon: 'crown';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'custom';
+        }
+      >;
+    cta: Attribute.Component<'link.link'>;
+    image: Attribute.Media<'images'>;
+    map: Attribute.String;
+  };
+}
+
+export interface ContentContactForm extends Schema.Component {
+  collectionName: 'components_content_contact_forms';
+  info: {
+    displayName: 'contactForm';
+    icon: 'oneToMany';
+  };
+  attributes: {
+    title: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'custom';
+        }
+      >;
   };
 }
 
@@ -135,6 +208,41 @@ export interface ContentShortArticle extends Schema.Component {
   };
   attributes: {
     articles: Attribute.Component<'content-components.articles', true>;
+  };
+}
+
+export interface ContentSignpost extends Schema.Component {
+  collectionName: 'components_content_signposts';
+  info: {
+    displayName: 'signpost';
+    icon: 'archive';
+    description: '';
+  };
+  attributes: {
+    item: Attribute.Component<'content-components.signpost-item', true>;
+  };
+}
+
+export interface ContentSlider extends Schema.Component {
+  collectionName: 'components_content_sliders';
+  info: {
+    displayName: 'slider';
+    icon: 'dashboard';
+  };
+  attributes: {
+    item: Attribute.Component<'content-components.signpost-item', true>;
+  };
+}
+
+export interface LinkIconsLink extends Schema.Component {
+  collectionName: 'components_link_icons_links';
+  info: {
+    displayName: 'iconsLink';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    link: Attribute.String;
+    icon: Attribute.Media<'images'>;
   };
 }
 
@@ -179,12 +287,19 @@ declare module '@strapi/types' {
       'content-components.footer-item': ContentComponentsFooterItem;
       'content-components.icon': ContentComponentsIcon;
       'content-components.short-content': ContentComponentsShortContent;
+      'content-components.signpost-item': ContentComponentsSignpostItem;
       'content.big-image': ContentBigImage;
+      'content.carousel': ContentCarousel;
       'content.center-content': ContentCenterContent;
       'content.center-text': ContentCenterText;
       'content.clients': ContentClients;
+      'content.contact-block': ContentContactBlock;
+      'content.contact-form': ContentContactForm;
       'content.icons': ContentIcons;
       'content.short-article': ContentShortArticle;
+      'content.signpost': ContentSignpost;
+      'content.slider': ContentSlider;
+      'link.icons-link': LinkIconsLink;
       'link.link': LinkLink;
       'link.nav-item': LinkNavItem;
       'seo.meta': SeoMeta;

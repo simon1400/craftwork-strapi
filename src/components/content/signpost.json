@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_signposts",
+  "info": {
+    "displayName": "signpost",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.signpost-item"
+    }
+  }
+}

@@ -38,7 +38,12 @@
         "content.clients",
         "content.icons",
         "content.short-article",
-        "content.center-text"
+        "content.center-text",
+        "content.signpost",
+        "content.carousel",
+        "content.slider",
+        "content.contact-block",
+        "content.contact-form"
       ],
       "required": false
     },
@@ -53,6 +58,14 @@
         "preset": "custom"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "smallTitile": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
     }
   }
 }

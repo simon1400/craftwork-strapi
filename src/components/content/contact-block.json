@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_content_contact_blocks",
+  "info": {
+    "displayName": "ContactBlock",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "custom"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "map": {
+      "type": "string"
+    }
+  }
+}

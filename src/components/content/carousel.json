@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_carousels",
+  "info": {
+    "displayName": "carousel",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.signpost-item"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_sliders",
+  "info": {
+    "displayName": "slider",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.signpost-item"
+    }
+  }
+}
