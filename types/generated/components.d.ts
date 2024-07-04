@@ -15,7 +15,7 @@ export interface ContentComponentsArticles extends Schema.Component {
         }
       >;
     link: Attribute.Component<'link.link'>;
-    image: Attribute.Media<'images'> & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -43,7 +43,7 @@ export interface ContentComponentsIcon extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    icon: Attribute.Media<'images'> & Attribute.Required;
+    icon: Attribute.Media & Attribute.Required;
     content: Attribute.Text;
   };
 }
@@ -81,7 +81,7 @@ export interface ContentComponentsSignpostItem extends Schema.Component {
           preset: 'custom';
         }
       >;
-    image: Attribute.Media<'images'>;
+    image: Attribute.Media;
   };
 }
 
@@ -92,7 +92,7 @@ export interface ContentBigImage extends Schema.Component {
     description: '';
   };
   attributes: {
-    image: Attribute.Media<'images'> & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -144,7 +144,7 @@ export interface ContentClients extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    images: Attribute.Media<'images', true> & Attribute.Required;
+    images: Attribute.Media & Attribute.Required;
     cta: Attribute.Component<'link.link'>;
   };
 }
@@ -154,10 +154,11 @@ export interface ContentContactBlock extends Schema.Component {
   info: {
     displayName: 'ContactBlock';
     icon: 'crown';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    content: Attribute.RichText &
+    description: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -165,7 +166,7 @@ export interface ContentContactBlock extends Schema.Component {
         }
       >;
     cta: Attribute.Component<'link.link'>;
-    image: Attribute.Media<'images'>;
+    imagePoint: Attribute.Media;
     map: Attribute.String;
   };
 }
@@ -175,12 +176,13 @@ export interface ContentContactForm extends Schema.Component {
   info: {
     displayName: 'contactForm';
     icon: 'oneToMany';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     phone: Attribute.String;
     email: Attribute.Email;
-    content: Attribute.RichText &
+    description: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -234,6 +236,24 @@ export interface ContentSlider extends Schema.Component {
   };
 }
 
+export interface ContentWisiwig extends Schema.Component {
+  collectionName: 'components_content_wisiwigs';
+  info: {
+    displayName: 'wisiwig';
+    icon: 'collapse';
+  };
+  attributes: {
+    contentWisiwig: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'custom';
+        }
+      >;
+  };
+}
+
 export interface LinkIconsLink extends Schema.Component {
   collectionName: 'components_link_icons_links';
   info: {
@@ -242,7 +262,7 @@ export interface LinkIconsLink extends Schema.Component {
   };
   attributes: {
     link: Attribute.String;
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media;
   };
 }
 
@@ -276,7 +296,7 @@ export interface SeoMeta extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
-    image: Attribute.Media<'images'>;
+    image: Attribute.Media;
   };
 }
 
@@ -299,6 +319,7 @@ declare module '@strapi/types' {
       'content.short-article': ContentShortArticle;
       'content.signpost': ContentSignpost;
       'content.slider': ContentSlider;
+      'content.wisiwig': ContentWisiwig;
       'link.icons-link': LinkIconsLink;
       'link.link': LinkLink;
       'link.nav-item': LinkNavItem;

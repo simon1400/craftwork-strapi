@@ -24,6 +24,7 @@ globalThis.CKEditorConfig = {
                     CKEditor5.basicStyles.Bold,
                     CKEditor5.basicStyles.Italic,
                     CKEditor5.essentials.Essentials,
+                    CKEditor5.blockQuote.BlockQuote,
                     CKEditor5.heading.Heading,
                     CKEditor5.link.Link,
                     CKEditor5.list.List,
@@ -40,6 +41,7 @@ globalThis.CKEditorConfig = {
                     '|',
                     'bold', 'italic', 'link', 'bulletedList', 'numberedList',
                     '|', 'insertTable',
+                    '|', 'blockQuote',
                     '|',
                     'undo', 'redo'
                   ],

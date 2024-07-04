@@ -2,7 +2,8 @@
   "collectionName": "components_content_contact_forms",
   "info": {
     "displayName": "contactForm",
-    "icon": "oneToMany"
+    "icon": "oneToMany",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,7 +16,7 @@
     "email": {
       "type": "email"
     },
-    "content": {
+    "description": {
       "type": "customField",
       "options": {
         "preset": "custom"

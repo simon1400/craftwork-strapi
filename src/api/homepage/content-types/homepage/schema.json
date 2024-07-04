@@ -44,7 +44,8 @@
         "content.carousel",
         "content.slider",
         "content.contact-block",
-        "content.contact-form"
+        "content.contact-form",
+        "content.wisiwig"
       ]
     },
     "meta": {

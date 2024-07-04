@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog-page",
     "pluralName": "blog-pages",
-    "displayName": "blogPage"
+    "displayName": "blogPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +24,7 @@
       },
       "type": "string"
     },
-    "content": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,11 +33,12 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "post"
+    "displayName": "post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,11 +35,12 @@
       "targetField": "title"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -63,7 +65,8 @@
         "content.icons",
         "content.short-article",
         "content.signpost",
-        "content.slider"
+        "content.slider",
+        "content.wisiwig"
       ]
     },
     "content": {

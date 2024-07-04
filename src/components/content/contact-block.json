@@ -2,14 +2,15 @@
   "collectionName": "components_content_contact_blocks",
   "info": {
     "displayName": "ContactBlock",
-    "icon": "crown"
+    "icon": "crown",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "content": {
+    "description": {
       "type": "customField",
       "options": {
         "preset": "custom"
@@ -21,12 +22,13 @@
       "repeatable": false,
       "component": "link.link"
     },
-    "image": {
+    "imagePoint": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "map": {
       "type": "string"
