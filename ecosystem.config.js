@@ -1,8 +1,7 @@
 module.exports = {
   apps : [{
     name   : "Craftwork strapi copy",
-    script : "yarn start",
-    env_production: {}
+    script : "npm start"
   }],
 
   deploy : {
@@ -12,7 +11,7 @@ module.exports = {
       ref  : 'origin/main',
       repo : 'git@github.com:simon1400/craftwork-strapi.git',
       path : '/home/dimi/app/craftwork/strapi-copy',
-      'post-deploy' : 'yarn && yarn build && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm i && npm run build && pm2 reload ecosystem.config.js --env production',
     }
   }
 };

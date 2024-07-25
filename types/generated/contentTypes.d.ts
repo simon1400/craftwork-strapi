@@ -835,7 +835,7 @@ export interface ApiBlogPageBlogPage extends Schema.SingleType {
   info: {
     singularName: 'blog-page';
     pluralName: 'blog-pages';
-    displayName: 'blogPage';
+    displayName: 'P\u0159ehled blogu';
     description: '';
   };
   options: {
@@ -938,7 +938,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   info: {
     singularName: 'global';
     pluralName: 'globals';
-    displayName: 'global';
+    displayName: 'Glob\u00E1ln\u00ED prvky';
     description: '';
   };
   options: {
@@ -1114,7 +1114,7 @@ export interface ApiPostPost extends Schema.CollectionType {
   info: {
     singularName: 'post';
     pluralName: 'posts';
-    displayName: 'post';
+    displayName: 'P\u0159\u00EDsp\u011Bvky v blogu';
     description: '';
   };
   options: {
