@@ -82,6 +82,7 @@ export interface ContentComponentsSignpostItem extends Schema.Component {
         }
       >;
     image: Attribute.Media;
+    url: Attribute.String;
   };
 }
 
