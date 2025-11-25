@@ -1,18 +1,18 @@
 module.exports = {
   apps : [{
-    name   : "Craftwork strapi",
-    script : "npm start",
-    env_production: {}
-  }],
-
-  deploy : {
-    production : {
-      user : 'dimi',
-      host : ['89.221.216.23'],
-      ref  : 'origin/main',
-      repo : 'git@github.com:simon1400/craftwork-strapi.git',
-      path : '/var/www/craftwork/strapi',
-      'post-deploy' : 'yarn && yarn build && pm2 reload ecosystem.config.js --env production',
+    name: "craftwork-strapi",
+    script: "npm",
+    args: "start",
+    cwd: "/home/dimi/app/craftwork/strapi",
+    exec_mode: "fork",
+    instances: 1,
+    autorestart: true,
+    watch: false,
+    max_memory_restart: "1G",
+    env_production: {
+      NODE_ENV: "production",
+      HOST: "0.0.0.0",
+      PORT: 1337
     }
-  }
+  }]
 };
