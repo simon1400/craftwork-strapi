@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_content_clients",
+  "info": {
+    "displayName": "Loga klientů",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

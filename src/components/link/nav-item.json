@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_link_nav_items",
+  "info": {
+    "displayName": "NavItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_center_contents",
+  "info": {
+    "displayName": "Vycentrovaný text",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "displayName": "ShortContent",
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.short-content"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_icons",
+  "info": {
+    "displayName": "Ikonky s textem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-components.icon"
+    }
+  }
+}

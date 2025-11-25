@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Hlavní strana",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "custom"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "Components": {
+      "type": "dynamiczone",
+      "components": [
+        "content.icons",
+        "content.clients",
+        "content.big-image",
+        "content.center-content",
+        "content.short-article",
+        "content.center-text"
+      ]
+    },
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

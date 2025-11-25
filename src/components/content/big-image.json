@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_big_images",
+  "info": {
+    "displayName": "Velký obrázek",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

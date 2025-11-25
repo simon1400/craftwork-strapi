@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Články",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "content.big-image",
+        "content.center-content",
+        "content.clients",
+        "content.icons",
+        "content.short-article",
+        "content.center-text"
+      ],
+      "required": false
+    },
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "custom"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}
